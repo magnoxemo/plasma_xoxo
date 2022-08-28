@@ -8,10 +8,6 @@ class elctron():
 
     #fundamental constants 
 
-    charge=1.6*10**-19
-    mass=9.11*10**-31
-    k=1.9*10**-23
-
     """position """
     x=[]
     y=[]
@@ -19,7 +15,10 @@ class elctron():
 
 
     def __init__(self,T):
-        
+
+        charge=1.6*10**-19
+        mass=9.11*10**-31
+        k=1.9*10**-23
         m=self.mass
         temp=T
         K=self.k
@@ -27,38 +26,46 @@ class elctron():
 
         pass
 
-    def electric_force():
+    def electric_force(self):
 
         electric_force=np.array(3)
+        columb_constant=9*10**9
+        r=[]
+        def distance(r=[]):
+            r=r
+            return math.sqrt(r[0]**2+r[1]**2+r[2]**2)
+        
+        force=columb_constant*(1.6*10**-19)**2/math.pow(distance(r),2) 
+            
         #as the force is a vector and it will have three components in x,y and  direction 
 
         pass 
 
-    def magnetic_forcce():
+    def magnetic_forcce(self):
 
         magnetic_force=np.array(3)
 
         pass 
 
-    def position_updater():
+    def position_updater(self):
 
         position=np.array(3)
 
         pass 
 
-    def velocity_updater():
+    def velocity_updater(self):
 
         velocity=np.array(3)
         
 
         pass 
 
-    def acceleration_updater():
+    def acceleration_updater(self):
         acceleration=np.array(3)
         
         pass 
 
-    def temp_updater(T):
+    def temp_updater(self,T):
         temp=T
 
         pass 
@@ -85,27 +92,39 @@ class proton():
         v0=math.sqrt(K*temp/m)
 
         pass
-
-    def electric_force():
+    
+    def electric_force(self):
 
         electric_force=np.array(3)
+        columb_constant=9*10**9
+        r=[]
+        def distance(r=[]):
+            r=r
+            return math.sqrt(r[0]**2+r[1]**2+r[2]**2)
+        
+        force=columb_constant*(1.6*10**-19)**2/math.pow(distance(r),2) 
+            
         #as the force is a vector and it will have three components in x,y and  direction 
 
         pass 
 
-    def magnetic_forcce():
+    def magnetic_forcce(self):
 
         magnetic_force=np.array(3)
 
         pass 
 
-    def position_updater():
+    def position_updater(self):
 
         position=np.array(3)
+
         pass 
-        
-    def velocity_updater():
+
+    def velocity_updater(self):
+
         velocity=np.array(3)
+        
+
         pass 
 
     def acceleration_updater():
@@ -113,7 +132,7 @@ class proton():
         
         pass 
 
-    def temp_updater(T):
+    def temp_updater(self,T):
         temp=T
 
         pass 
